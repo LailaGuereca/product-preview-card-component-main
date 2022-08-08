@@ -28,12 +28,119 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 15%;
+    height: 100vh;
 }
 
 /*Preview card*/
 .card {
     background: var(--neutral-white);
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
+.card .card-content span{
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-family: var(--font-family-p);
+    color: var(--neutral-dark-gravysh-blue);
+    font-size: .9em;
+}
+
+.card .card-content h1 {
+    font-family: var(--font-family-title);
+    color: var(--neutral-very-dark-blue);
+    font-weight: var(--font-weight-two);
+    font-size: 2.5em;
+    line-height: 1em;
+}
+
+.card .card-content p {
+    font-family: var(--font-family-p);
+    font-weight: var(--font-weight-one);
+    color: var(--neutral-dark-gravysh-blue);
+    font-size: .9em;
+    line-height: 1.7em;
+    text-align: left;
+    display: block;
+}
+
+.card .card-prices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card .card-prices h2 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-two);
+    color: var(--primary-dark-cyan);
+    font-size: 2em;
+}
+
+.card .card-prices p {
+    font-family: var(--font-family-p);
+    font-weight: var(--font-weight-one);
+    color: var(--neutral-dark-gravysh-blue);
+    text-decoration: line-through;
+    padding-left: 15px;
+    font-size: .9em;
+}
+
+button {
+    background-color: var(--primary-dark-cyan);
+    color: var(--neutral-white);
+    font-family: var(--font-family-p);
+    font-weight: var(--font-weight-one);
+    font-size: .9em;
+    border-radius: 10px;
+    border: none;
+    padding: 15px;
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        margin: 25px 15px;
+        height: 750px;
+        width: 405px;
+    }
+
+    .card .card-content-div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 30px;
+    }
+
+    .card .card-content-div .card-content p {
+        padding-right: 45px;
+    }
+
+    .card .card-content-div button {
+        width: 100%;
+    }
+
+    .card .card-img .img-1 {
+        width: 100%;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+    .card .card-img .img-2 {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card .card-img .img-1 {
+        display: none;
+        visibility: hidden;
+    }
+}
